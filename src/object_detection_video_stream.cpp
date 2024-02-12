@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
 	try {
 		cap.open(std::stoi(inputVideo));
 	} catch (const std::exception& e) {
-		cap.open(inputVideo);
+		cap.open(inputVideo, cv::CAP_GSTREAMER);
 	}
 
 	// Try to use HD resolution (or closest resolution)
